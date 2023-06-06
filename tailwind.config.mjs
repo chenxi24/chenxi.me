@@ -5,11 +5,15 @@ export default {
   theme: {
     extend: {
       spacing: {
+        'page-top': 'var(--page-top)',
         'header-height': 'var(--header-height)',
         'page-gutter': 'var(--page-gutter)'
       },
       maxWidth: {
         content: 'var(--content-width)'
+      },
+      minHeight: {
+        content: 'var(--content-height)'
       },
       colors: {
         muted: 'hsl(var(--color-muted) / <alpha-value>)'

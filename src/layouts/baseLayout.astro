@@ -23,5 +23,10 @@ import Header from '@/components/Header.astro'
 
   <body>
     <Header />
+    <main id="content" class="flex justify-center px-page-gutter py-page-top">
+      <div class="min-h-content w-full max-w-content">
+        <slot />
+      </div>
+    </main>
   </body>
 </html>

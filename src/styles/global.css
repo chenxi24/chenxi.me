@@ -4,8 +4,10 @@
 
 :root {
   --header-height: 72px;
+  --page-top: 48px;
   --page-gutter: 24px;
   --content-width: 72rem;
+  --content-height: calc(100vh - var(--header-height) - (var(--page-top) * 2));
 
   --color-muted: 257deg 9% 61%;
 
