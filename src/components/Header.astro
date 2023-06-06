@@ -1,0 +1,32 @@
+---
+const navbar = [['Blog', '/blog']]
+
+const { pathname } = Astro.url
+
+const isCurrentPage = (url: string) => {
+  return pathname.replace(/(\/.*?)\/$/, '$1') === url
+}
+---
+
+<header class="flex h-header-height justify-center px-page-gutter">
+  <div class="flex w-full max-w-content items-center justify-between">
+    <a href={isCurrentPage('/') ? '#' : '/'}>Chen Xi</a>
+    <nav>
+      <ul class="flex items-center gap-3">
+        {
+          navbar.map(([name, href]) => {
+            return (
+              <li>
+                <a
+                  class="rounded-md px-2.5 py-1.5 text-[15px] font-semibold transition hover:bg-muted/10 focus:outline-none focus:ring focus:ring-inset"
+                  {href}>
+                  {name}
+                </a>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
