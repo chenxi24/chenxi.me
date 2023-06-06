@@ -7,7 +7,8 @@ export default {
       spacing: {
         'page-top': 'var(--page-top)',
         'header-height': 'var(--header-height)',
-        'page-gutter': 'var(--page-gutter)'
+        'page-gutter': 'var(--page-gutter)',
+        'footer-height': 'var(--footer-height)'
       },
       maxWidth: {
         content: 'var(--content-width)'
