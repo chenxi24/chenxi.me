@@ -1,4 +1,5 @@
 ---
+import '@/styles/vars.css'
 import '@/styles/global.css'
 
 import Header from '@/components/Header.astro'
@@ -11,6 +12,8 @@ import Footer from '@/components/Footer.astro'
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,13 +27,12 @@ import Footer from '@/components/Footer.astro'
 
   <body>
     <Header />
-
     <main id="content" class="flex justify-center px-page-gutter py-page-top">
       <div class="min-h-content w-full max-w-content">
         <slot />
       </div>
     </main>
-
     <Footer />
   </body>
 </html>
+<script is:inline src="/js/toggle-theme.js"></script>

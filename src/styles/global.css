@@ -2,47 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --header-height: 72px;
-  --footer-height: 72px;
-  --page-top: 48px;
-  --page-gutter: 24px;
-  --content-width: 72rem;
-  --content-height: calc(
-    100vh - var(--header-height) - (var(--page-top) * 2) - var(--footer-height)
-  );
-
-  --color-muted: 257deg 9% 61%;
-
-  --fontFamily-sans: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-
-  --fontFamily-serif: 'Merriweather', 'Georgia', Cambria, 'Times New Roman',
-    Times, serif;
-
-  --font-body: var(--fontFamily-serif);
-  --font-heading: var(--fontFamily-sans);
-
-  --fontSize-root: 16px;
-  --fontSize-xs: 0.75rem;
-  --fontSize-sm: 0.875rem;
-  --fontSize-base: 1rem;
-
-  /*  1.333 Perfect Fouth Scale */
-  --fontSize-0: 0.75rem;
-  --fontSize-1: 1rem;
-  --fontSize-2: 1.333rem;
-  --fontSize-3: 1.778rem;
-  --fontSize-4: 2.37rem;
-  --fontSize-5: 3.16rem;
-  --fontSize-6: 4.21rem;
-
-  --fontWeight-normal: 400;
-  --fontWeight-bold: 700;
-  --fontWeight-black: 900;
-}
-
 html,
 body {
   height: 100%;
@@ -58,7 +17,12 @@ html {
 body {
   font-family: var(--font-body);
   font-size: var(--fontSize-base);
-  color: var(--color-text);
+  color: rgba(var(--color-text-1));
+  background-color: rgba(var(--color-fill));
+}
+
+.dark footer {
+  color: rgba(var(--color-text-2));
 }
 
 h1,

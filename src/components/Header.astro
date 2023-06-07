@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon'
+
 const navbar = [['Blog', '/blog']]
 
 const { pathname } = Astro.url
@@ -10,7 +12,7 @@ const isCurrentPage = (url: string) => {
 
 <header class="flex h-header-height justify-center px-page-gutter">
   <div class="flex w-full max-w-content items-center justify-between">
-    <a href={isCurrentPage('/') ? '#' : '/'}>Chen Xi</a>
+    <a class="font-semibold" href={isCurrentPage('/') ? '#' : '/'}> Chen Xi</a>
     <nav>
       <ul class="flex items-center gap-3">
         {
@@ -26,6 +28,21 @@ const isCurrentPage = (url: string) => {
             )
           })
         }
+        <li id="theme-btn">
+          <Icon
+            class="cursor-pointer dark:hidden"
+            width="20"
+            height="20"
+            name="tabler:sun"
+          />
+
+          <Icon
+            class="hidden cursor-pointer dark:inline"
+            width="20"
+            height="20"
+            name="tabler:moon"
+          />
+        </li>
       </ul>
     </nav>
   </div>
