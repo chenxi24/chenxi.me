@@ -2,9 +2,9 @@
  * Colors Base
  * -------------------------------------------------------------------------- */
 :root {
-  --color-text-light-1: 60, 60, 67;
-  --color-text-light-2: 60, 60, 67, 0.75;
-  --color-text-light-3: (60, 60, 67, 0.33);
+  --color-text-light-1: 34, 34, 34;
+  --color-text-light-2: 34, 34, 34, 0.75;
+  --color-text-light-3: (34, 34, 34, 0.33);
 
   --color-text-dark-1: 255, 255, 245, 0.86;
   --color-text-dark-2: 235, 235, 245, 0.6;

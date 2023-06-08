@@ -25,15 +25,6 @@ body {
   color: rgba(var(--color-text-2));
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-}
-
 h1 {
   font-size: var(--fontSize-6);
   font-weight: var(--fontWeight-black);
@@ -65,4 +56,12 @@ h5 {
 
 h6 {
   font-size: var(--fontSize-1);
+}
+
+.icon {
+  font-size: 1.5em;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  pointer-events: none;
 }
