@@ -2,6 +2,7 @@
   "name": "chenxi.me",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@8.4.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,6 +12,7 @@
     "lint": "eslint . --ext .ts,.astro,",
     "check": "astro check && tsc --noEmit",
     "format": "prettier --plugin-search-dir . --write .",
+    "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
@@ -25,6 +27,7 @@
     "eslint": "^8.42.0",
     "eslint-plugin-astro": "^0.27.1",
     "lint-staged": "^13.2.2",
+    "only-allow": "^1.1.1",
     "prettier": "^2.8.8",
     "prettier-config-standard": "^5.0.0",
     "prettier-plugin-astro": "^0.10.0",
