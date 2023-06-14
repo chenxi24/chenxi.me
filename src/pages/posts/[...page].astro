@@ -1,0 +1,72 @@
+---
+import '@/styles/postlist.css'
+
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { Icon } from 'astro-icon'
+
+import { CollectionEntry, getCollection } from 'astro:content'
+import { format } from 'date-fns'
+
+import type { GetStaticPaths, Page } from 'astro'
+
+interface Props {
+  page: Page<CollectionEntry<'posts'>>
+}
+
+export const getStaticPaths = (async ({ paginate }) => {
+  //  过滤草稿，按日期排序
+  const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
+    (a, b) => a.data.date.valueOf() - b.data.date.valueOf()
+  )
+
+  return paginate(posts, { pageSize: 5 })
+}) satisfies GetStaticPaths
+
+const { page } = Astro.props
+---
+
+<BaseLayout>
+  <section class="postlist">
+    <ul>
+      {
+        page.data.map(({ slug, data }) => {
+          return (
+            <>
+              <li class="postlist__item ">
+                <h3 class="postslist__heading">
+                  <a href={`/posts/${slug}`}>{data.title}</a>
+                </h3>
+                <div class="postlist__meta">
+                  <time>{format(new Date(data.date), 'do MMMM, yyyy')}</time>
+                  <span> ⋅ </span>
+                  <span>{data.author}</span>
+                </div>
+                <p class="postlist__excerpt">{data.description}</p>
+              </li>
+            </>
+          )
+        })
+      }
+    </ul>
+    <nav class="grid grid-cols-2 py-12 text-sm sm:text-base">
+      {
+        page.url.prev && (
+          <a
+            class=" flex items-center justify-self-start "
+            href={page.url.prev}>
+            <Icon width="20" height="20" name="tabler:chevron-left" />
+            <span>Prev</span>
+          </a>
+        )
+      }
+      {
+        page.url.next && (
+          <a class="flex items-center justify-self-end" href={page.url.next}>
+            <span>Next</span>
+            <Icon width="20" height="20" name="tabler:chevron-right" />
+          </a>
+        )
+      }
+    </nav>
+  </section>
+</BaseLayout>

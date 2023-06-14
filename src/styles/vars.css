@@ -2,9 +2,9 @@
  * Colors Base
  * -------------------------------------------------------------------------- */
 :root {
-  --color-text-light-1: 34, 34, 34;
-  --color-text-light-2: 34, 34, 34, 0.75;
-  --color-text-light-3: (34, 34, 34, 0.33);
+  --color-text-light-1: 24, 24, 35;
+  --color-text-light-2: 44, 51, 51;
+  --color-text-light-3: 129, 138, 145;
 
   --color-text-dark-1: 255, 255, 245, 0.86;
   --color-text-dark-2: 235, 235, 245, 0.6;
@@ -16,18 +16,32 @@
  * -------------------------------------------------------------------------- */
 :root {
   --color-fill: 255, 255, 255;
+  --prose-link: 255, 167, 196;
+  --prose-bullets: 142, 153, 164;
+  --prose-inlineCode-bg: 255, 229, 100, 0.2;
+  --prose-inlineCode-text: 26, 26, 26;
+  --prose-quote-borders: 101, 121, 140;
 
   --color-text-1: var(--color-text-light-1);
   --color-text-2: var(--color-text-light-2);
   --color-text-3: var(--color-text-light-3);
+
+  --color-heading: var(--color-text-2);
 }
 
 .dark {
   --color-fill: 30, 30, 32;
+  --prose-heading: 255, 255, 255;
+  --prose-link: 255, 167, 196;
+  --prose-bullets: 142, 153, 164;
+  --prose-inlineCode-bg: transparent;
+  --prose-inlineCode-text: 170, 200, 228;
 
   --color-text-1: var(--color-text-dark-1);
   --color-text-2: var(--color-text-dark-2);
   --color-text-3: var(--color-text-dark-3);
+
+  --color-heading: var(--color-text-1);
 }
 
 /**
@@ -48,6 +62,9 @@
   --fontSize-xs: 0.75rem;
   --fontSize-sm: 0.875rem;
   --fontSize-base: 1rem;
+  --fontSize-lg: 1.125rem;
+  --fontSize-xl: 1.25rem;
+  --fontSize-4xl: 2.25rem;
 
   /*  1.333 Perfect Fouth Scale */
   --fontSize-0: 0.75rem;
@@ -75,4 +92,20 @@
   --content-height: calc(
     100vh - var(--header-height) - (var(--page-top) * 2) - var(--footer-height)
   );
+
+  --spacing-px: '1px';
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
 }

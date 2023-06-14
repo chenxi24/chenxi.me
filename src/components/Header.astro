@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon'
 
-const navbar = [['Blog', '/blog']]
+const navbar = [['Blog', '/posts']]
 
 const { pathname } = Astro.url
 
@@ -34,7 +34,7 @@ const isCurrentPage = (url: string) => {
             return (
               <li>
                 <a
-                  class="rounded-md px-2.5 py-1.5 text-[15px] font-semibold transition hover:bg-muted/10 focus:outline-none focus:ring focus:ring-inset"
+                  class="hover:bg-muted/10 rounded-md px-2.5 py-1.5 text-[15px] font-semibold transition focus:outline-none focus:ring focus:ring-inset"
                   {href}>
                   {name}
                 </a>

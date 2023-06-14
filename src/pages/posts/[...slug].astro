@@ -1,0 +1,48 @@
+---
+import '@/styles/prose.css'
+
+import BaseLayout from '@/layouts/BaseLayout.astro'
+
+import { getCollection } from 'astro:content'
+import { format } from 'date-fns'
+
+import type { InferGetStaticPropsType, GetStaticPaths } from 'astro'
+
+export const getStaticPaths = (async () => {
+  //  过滤草稿，按日期排序
+  const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
+    (a, b) => a.data.date.valueOf() - b.data.date.valueOf()
+  )
+
+  return posts.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: post
+    }
+  })
+}) satisfies GetStaticPaths
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>
+
+const posts = Astro.props as Props
+
+const { data } = posts
+
+const { Content } = await posts.render()
+---
+
+<BaseLayout>
+  <article class="prose md:prose-md">
+    <header>
+      <h1>{data.title}</h1>
+      <div>
+        <time>{format(new Date(data.date), 'do MMMM, yyyy')}</time>
+        <span>⋅</span>
+        <span>{data.author}</span>
+      </div>
+    </header>
+    <div>
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

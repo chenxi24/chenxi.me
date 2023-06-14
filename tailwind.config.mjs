@@ -16,9 +16,6 @@ export default {
       },
       minHeight: {
         content: 'var(--content-height)'
-      },
-      colors: {
-        muted: 'hsl(var(--color-muted) / <alpha-value>)'
       }
     }
   }
