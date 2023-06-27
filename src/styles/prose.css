@@ -490,6 +490,8 @@
 .prose img {
   margin-top: 1.7142857em;
   margin-bottom: 1.7142857em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .prose video {

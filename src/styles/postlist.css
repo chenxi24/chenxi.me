@@ -1,7 +1,7 @@
 .postlist {
   max-width: 65ch;
   margin: 0 auto;
-  --postlist-heading: 2.1428571em;
+  font-size: var(--fontSize-sm);
 }
 
 .postlist .postlist__item {
@@ -14,7 +14,7 @@
 
 .postlist .postslist__heading {
   font-weight: var(--fontWeight-black);
-  font-size: var(--postlist-heading);
+  font-size: var(--fontSize-3xl);
 }
 
 .postlist .postlist__excerpt {
@@ -28,6 +28,9 @@
 }
 
 @media (min-width: 670px) {
+  .postlist {
+    font-size: var(--fontSize-base);
+  }
   .postlist .postlist__item {
     margin-bottom: var(--spacing-20);
   }
