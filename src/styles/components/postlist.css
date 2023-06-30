@@ -24,7 +24,7 @@
 .postlist .postlist__meta {
   margin-bottom: var(--spacing-4);
   font-size: var(--fontSize-sm);
-  color: rgb(var(--color-text-3));
+  color: var(--color-text-3);
 }
 
 @media (min-width: 670px) {

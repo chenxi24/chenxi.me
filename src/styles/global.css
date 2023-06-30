@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-scrollbar: #eee;
+  --color-scrollbar-hover: #bbb;
+}
+
 html,
 body {
   height: 100%;
@@ -15,21 +20,26 @@ html {
   scroll-behavior: smooth;
 }
 
+html.dark {
+  --color-scrollbar: #ebebf599;
+}
+
 body {
   font-family: var(--font-body);
   font-size: var(--fontSize-base);
-  color: rgba(var(--color-text-2));
-  background-color: rgba(var(--color-fill));
+  color: var(--color-text-2);
+  background-color: var(--color-fill);
 }
 
 .dark footer {
-  color: rgba(var(--color-text-3));
+  color: var(--color-text-3);
 }
 
 h1 {
-  color: rgba(var(--color-heading));
+  color: var(--color-heading);
   font-size: var(--fontSize-6);
   font-weight: var(--fontWeight-black);
+  font-family: var(--font-heading);
 }
 
 h2,
@@ -37,7 +47,8 @@ h3,
 h4,
 h5,
 h6 {
-  color: rgba(var(--color-heading));
+  font-family: var(--font-heading);
+  color: var(--color-heading);
   font-weight: var(--fontWeight-bold);
 }
 
@@ -65,6 +76,29 @@ h6 {
   font-size: 1.5em;
   height: 1em;
   width: 1em;
+  vertical-align: middle;
   fill: currentColor;
   pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-hover);
 }

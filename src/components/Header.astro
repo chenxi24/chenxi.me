@@ -13,7 +13,7 @@ const isCurrentPage = (url: string) => {
 <header class="flex h-header-height justify-center px-page-gutter">
   <div class="flex w-full max-w-content items-center justify-between">
     <a
-      class="flex items-center whitespace-nowrap text-sm font-semibold"
+      class="flex items-center whitespace-nowrap px-2.5 py-1.5 text-sm font-semibold focus:ring focus:ring-inset"
       href={isCurrentPage('/') ? '#' : '/'}>
       Chen Xi
       <svg
@@ -34,7 +34,7 @@ const isCurrentPage = (url: string) => {
             return (
               <li>
                 <a
-                  class="hover:bg-muted/10 rounded-md px-2.5 py-1.5 text-[15px] font-semibold transition focus:outline-none focus:ring focus:ring-inset"
+                  class="hover:bg-muted/10 rounded-md px-2.5 py-1.5 text-[15px] font-semibold transition focus:ring focus:ring-inset"
                   {href}>
                   {name}
                 </a>

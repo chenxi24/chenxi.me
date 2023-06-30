@@ -228,7 +228,7 @@
 .prose a {
   box-shadow: 0 1px 0 0 currentColor;
   text-decoration: none;
-  color: rgb(var(--prose-link));
+  color: var(--prose-link);
   font-weight: 500;
 }
 
@@ -286,7 +286,7 @@
   content: counter(list-item, var(--list-counter-style, decimal)) '.';
   position: absolute;
   font-weight: 400;
-  color: rgb(var(--prose-bullets));
+  color: var(--prose-bullets);
   left: 0;
 }
 
@@ -298,7 +298,7 @@
 .prose ul > li::before {
   content: '';
   position: absolute;
-  background-color: rgba(var(--prose-quote-borders));
+  background-color: var(--prose-quote-borders);
   border-radius: 50%;
   height: 0.3571429em;
   width: 0.3571429em;
@@ -318,7 +318,7 @@
   font-weight: 500;
   font-style: italic;
   border-left-width: 0.25rem;
-  border-color: rgba(var(--prose-quote-borders));
+  border-color: var(--prose-quote-borders);
   quotes: '\201C' '\201D' '\2018' '\2019';
   margin-top: 1.3333333em;
   margin-bottom: 1.3333333em;
@@ -334,7 +334,6 @@
 }
 
 .prose h1 {
-  color: rgb(var(--prose-heading));
   font-size: 2.1428571em;
   margin-top: 0;
   margin-bottom: 0.8em;
@@ -391,8 +390,8 @@
 .prose code {
   font-weight: 600;
   font-size: 0.8571429em;
-  background-color: rgb(var(--prose-inlineCode-bg));
-  color: rgb(var(--prose-inlineCode-text));
+  background-color: var(--prose-inlineCode-bg);
+  color: var(--prose-inlineCode-text);
   padding: 0.15em 0.2em 0.05em;
 }
 
