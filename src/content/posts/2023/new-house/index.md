@@ -1,6 +1,6 @@
 ---
 title: New House
-date: 2023-06-12
+pubDate: 2023-06-12
 description: Hello, welcome to my new house.
 ---
 

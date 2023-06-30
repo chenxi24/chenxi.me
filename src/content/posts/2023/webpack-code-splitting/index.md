@@ -1,6 +1,6 @@
 ---
 title: Code Splitting
-date: 2023-06-22
+pubDate: 2023-06-22
 description: 本文将会介绍 WebPack 的分包策略，以及如何通过配置 SplitChunksPlugin 优化分包。
 ---
 

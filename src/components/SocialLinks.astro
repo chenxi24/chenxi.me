@@ -1,0 +1,40 @@
+---
+import { Icon } from 'astro-icon'
+
+import { SITE } from '@/config'
+
+const socialLinks = [
+  {
+    title: "Chen Xi's Github Profile",
+    link: 'https://github.com/chenxi24',
+    icon: 'tabler:brand-github'
+  },
+  {
+    title: "Chen Xi's Bilibili Profile",
+    link: 'https://space.bilibili.com/301489308',
+    icon: 'ri:bilibili-fill'
+  },
+  {
+    title: 'RSS',
+    link: `${SITE.website}rss.xml`,
+    icon: 'tabler:rss'
+  }
+]
+---
+
+<div
+  class="fixed bottom-0 right-10 hidden h-64 w-6 flex-col items-center justify-between md:flex">
+  <div class="flex flex-col space-y-6">
+    {
+      socialLinks.map((social) => (
+        <a
+          title={social.title}
+          href={social.link}
+          class="link-outline scale-110 rounded">
+          <Icon width="20" height="20" name={social.icon} />
+        </a>
+      ))
+    }
+  </div>
+  <div class="h-1 w-40 rotate-90 bg-black"></div>
+</div>
